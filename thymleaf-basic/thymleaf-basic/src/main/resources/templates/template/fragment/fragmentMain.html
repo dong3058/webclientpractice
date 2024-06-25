@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>부분 포함</h1>
+<h2>부분 포함 insert</h2>
+<div th:insert="~{template/fragment/footer :: copy}"></div><!--insert는 copy를 가져오서 안에다가
+넣는것 즉 div안에다가 copy내용을 넣는다 즉 <div><>footer</div>-->
+
+<h2>부분 포함 replace</h2>
+<div th:replace="~{template/fragment/footer :: copy}"></div>
+<!--replace는 아예 ㄷ체를 해버린다 즉 div가 사라지고 footer가 들어옴.-->
+<h2>부분 포함 단순 표현식</h2>
+<div th:replace="template/fragment/footer :: copy"></div>
+
+<h1>파라미터 사용</h1>
+<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>
+<!-- copyparam이라는 프레그먼트를 가져온다- 그리고 데이터들을 차례댈 넘긴것.->
+</body>
+</html>

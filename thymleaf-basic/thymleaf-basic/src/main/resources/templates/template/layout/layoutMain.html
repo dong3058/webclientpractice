@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/layout/base :: common_header(~{::title},~{::link})">
+   <!-- title자체를 넘겨버린 ~{::title} 링크 태그도 2개가 넘어감.
+   즉 2개의 명령어는 현재 페이지의 태그들을,링크 태그들을 넘긴다는 말이다.-->
+
+    <title>메인 타이틀</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/themes/smoothness/jquery-ui.css}">
+</head>
+<body>
+메인 컨텐츠
+</body>
+</html>
+
+
+<!--<head th:fragment="common_header(title,links)">
+
+    <title th:replace="${title}">레이아웃 타이틀</title>
+    이 타티틀이 mainpage의 메인타이틀로 대체된다.
+
+
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/awesomeapp.css}">
+<link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+<script type="text/javascript" th:src="@{/sh/scripts/codebase.js}"></script>
+
+
+<th:block th:replace="${links}" />
+애도 변수 넘긴 두개의 링크로 댜체돈다.
+
+</head>-->
